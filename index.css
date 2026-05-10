@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: #fff;
+  color: #222;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+   transition: background 0.2s, color 0.2s;
+}
+
+.topnav a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.topnav a.active:hover {
+  background-color: #038a58;
+  color: white;
+}
+.page-wrapper {
+  margin-top: 50px;       
+  padding: 30px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.about {
+  order: 1;
+  flex: 1;
+  animation-duration: 3s;
+  animation-name: slide-in;
+  line-height: 1.7;
+}
+.about p + p {
+  margin-top: 10px;
+}
+.about{
+    float: left;
+    padding-right: 400px;
+    pointer-events: none;
+    padding-top: 70px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+.about span {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-name: grow-shrink;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+@keyframes grow-shrink {
+  25%,
+  75% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 200%;
+    color: magenta;
+  }
+}
+.ed{
+  padding-top:90px;
+  order: 1;
+}
